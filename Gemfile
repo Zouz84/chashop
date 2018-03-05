@@ -15,6 +15,7 @@ gem 'jbuilder'
 gem 'devise'
 gem 'gmaps4rails'
 gem 'gmail'
+gem 'stripe'
 
 group :development, :test do
   gem 'sqlite3'
