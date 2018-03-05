@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'devise'
 gem 'gmaps4rails'
+gem 'gmail'
 
 group :development, :test do
   gem 'sqlite3'
