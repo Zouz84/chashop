@@ -1,118 +1,132 @@
-<%= stylesheet_link_tag "main.css" %>
-<%= javascript_include_tag 'main.js' %>
+<%= render 'layouts/header' %>
+<% @items.each do |item| %>
+  <div class="container-fluid main-wrapper">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- PRODUCTS ROW -->
+        <div class="container-fluid no-padding">
+          <div class="row">
+            <!-- PRODUCT SINGLE -->
+            <div class="col-md-8 col-sm-6 no-padding">
+              <div class="product-item mb-0">
+                <div class="product-item-thumbnail text-center mb-0 no-radius">
+                  <span class="product-item-thumbnail-label"><%= item.title %></span>
+                  <%= image_tag item.image.url(:medium), :class => "img-responsive", :alt => "product image" %>
+                  
+                  <div class="product-item-thumbnail-overlay product-item-thumbnail-overlay-with-bg product-item-thumbnail-overlay-large">
+                  <a class="product-item-thumbnail-link" href="#"> <%= link_to 'Show', @item %> </a>
+                  <div class="row">
+                    <div class="col-xs-12 text-center mb-30">
+                      <a class="h5" href="#"><%= item.title %></a>
+                    </div>
 
+                    <div class="col-xs-12 text-center mb-30">
+                      <del class="h5 text-muted product-item-price-old">$99.00</del>
+                      <span class="h5 product-item-price"><%= item.price %></span>
+                    </div>
+                  </div>
 
-
-
-
-<!-- Wrapper -->
-      <div id="wrapper">
-
-        <!-- Header -->
-          <header id="header">
-            <div class="inner">
-
-              <!-- Logo -->
-                <a href="index.html" class="logo">
-                  <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">JE CHANGE CE TITRE</span>
-                </a>
-
-              <!-- Nav -->
-                <nav>
-                  <ul>
-                    <li><a href="#menu">Menu</a></li>
-                  </ul>
-                </nav>
-
+                    <a href="#" class="btn btn-default pulse"><span class="ti-heart mr-0"></span></a>
+                    <a href="#" class="btn btn-primary">add to cart</a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </header>
-
-        <!-- Menu -->
-          <nav id="menu">
-            <h2>Menu</h2>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="generic.html">Ipsum veroeros</a></li>
-              <li><a href="generic.html">Tempus etiam</a></li>
-              <li><a href="generic.html">Consequat dolor</a></li>
-              <li><a href="elements.html">Elements</a></li>
-            </ul>
-          </nav>
-
-        <!-- Main -->
-          <div id="main">
-            <div class="inner">
-              <header>
-                <h1>This is Phantom, a free, fully responsive site<br />
-                template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-                <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
-              </header>
-              
-              <section class="tiles">
-
-                 <% @items.each do |item| %>
-                      <ul >
-                        <li><%= item.title %></li>
-                        <li><%= item.description %></li>
-                        <li><%= item.price %></li>
-                        <li><%= item.image_url %></li>
-                        <!-- <li><%= link_to 'Show', item %></li>
-                        <li><%= link_to 'Edit', edit_item_path(item) %></li>
-                        <li><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-                      </ul> -->
-                    <% end %>
-                
-               
-              </section>
-            </div>
+            
           </div>
+        </div>
+        <% end %>
+        <!-- / PRODUCTS ROW -->
 
-        <!-- Footer -->
-          <footer id="footer">
-            <div class="inner">
-              <section>
-                <h2>Get in touch</h2>
-                <form method="post" action="#">
-                  <div class="field half first">
-                    <input type="text" name="name" id="name" placeholder="Name" />
+        <!-- FOOTER -->
+          <footer class="">
+              <div class="footer pt-60 pb-60" id="footer">
+                  <div class="container-fluid">
+                      <div class="row">
+                           <div class="smartphone-fw col-sm-3 mb-30">
+                           <h6 class="heading mt-0">CONTACT DATA</h6>
+                                  <address class="small">
+                                      <strong>Vega store</strong><br>
+                                      1355 Market Street, Suite 900<br>
+                                      San Francisco, CA 94103<br>
+                                      (123) 456-7890
+                                  </address>
+                              </div>
+                          <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2 mb-30">
+                              <h6 class="heading mt-0">INFORMATION</h6>
+                              <ul>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                              </ul>
+                          </div>
+
+                          <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2 mb-30">
+                              <h6 class="heading mt-0">TOP CATEGORIES</h6>
+                              <ul>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                              </ul>
+                          </div>
+
+                          <div class="smartphone-fw col-xs-6 col-sm-4 col-md-2 mb-30">
+                              <h6 class="heading mt-0">ACCOUNT</h6>
+                              <ul>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                                  <li> <a href="#"> Lorem Ipsum </a> </li>
+                              </ul>
+                          </div>
+           
+                          <div class="col-xs-12 col-sm-6 col-md-3">
+                              <h6 class="heading mt-0">STAY IN TOUCH</h6>
+
+                              <form>
+                                  <fieldset>
+                      <div class="form-group">
+                        <div class="footer-newsletter">
+                          <input class="form-control" id="firstName" placeholder="your e-mail" type="text">
+                          <button class="btn btn-link" type="button"><span class="ti-plus"></span></button>
+                        </div>
+                      </div>
+                    </fieldset>
+                              </form>
+
+                              <ul class="footer-social" data-wow-delay="0.6s">
+                                  <li><a href="#" class="pull-left"><span class="ti-facebook"></span></a></li>
+                                  <li><a href="#" class="pull-left"><span class="ti-twitter"></span></a></li>
+                                  <li><a href="#" class="pull-left"><span class="ti-instagram"></span></a></li>
+                                  <li><a href="#" class="pull-left"><span class="ti-youtube"></span></a></li>
+                              </ul>
+                          </div>
+                      </div>
                   </div>
-                  <div class="field half">
-                    <input type="email" name="email" id="email" placeholder="Email" />
+              </div>
+              
+              <div class="footer-bottom">
+                  <div class="container">
+                      <p class="pull-left"> Copyright © VEGA 2017. All right reserved. </p>
                   </div>
-                  <div class="field">
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                  </div>
-                  <ul class="actions">
-                    <li><input type="submit" value="Send" class="special" /></li>
-                  </ul>
-                </form>
-              </section>
-              <section>
-                <h2>Follow</h2>
-                <ul class="icons">
-                  <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-                  <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-                  <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-                  <li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
-                  <li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-                  <li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-                  <li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
-                  <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-                </ul>
-              </section>
-              <ul class="copyright">
-                <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-              </ul>
-            </div>
+              </div>
           </footer>
-
+        <!-- / FOOTER -->
       </div>
-
-    <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/skel.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="assets/js/main.js"></script>
+    </div>
+  </div>
 
 
+  <script src="assets/js/wow.js"></script>
+  <script>
+  window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')
+  </script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.countTo.js"></script>
+  <script src="assets/js/jquery.inview.js"></script>
+  <script src="assets/js/jquery.countdown.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+  <script src="assets/js/main.js"></script>
