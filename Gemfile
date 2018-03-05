@@ -16,6 +16,8 @@ gem 'devise'
 gem 'gmaps4rails'
 gem 'gmail'
 gem 'stripe'
+gem 'devise'
+
 
 group :development, :test do
   gem 'sqlite3'
