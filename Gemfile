@@ -16,7 +16,11 @@ gem 'devise'
 gem 'gmaps4rails'
 gem 'gmail'
 gem 'stripe'
+
 gem 'devise'
+
+
+gem 'bootstrap-sass', '~> 3.3.6'
 
 
 group :development, :test do
