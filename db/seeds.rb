@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Item.create(title:"Patatoe2", description: "The original potatoe Cat", price:"£6")
+Item.create(title:"Patatoe3", description: "The original potatoe Cat", price:"£7")
+Item.create(title:"Patatoe4", description: "The original potatoe Cat", price:"£8")
+Item.create(title:"Patatoe5", description: "The original potatoe Cat", price:"£9")
+Item.create(title:"Patatoe6", description: "The original potatoe Cat", price:"£8")
+Item.create(title:"Patatoe1", description: "The original potatoe Cat", price:"£7")
+Item.create(title:"Patatoe9", description: "The original potatoe Cat", price:"£3")
+Item.create(title:"Patatoe10", description: "The original potatoe Cat", price:"£2")
+Item.create(title:"Patatoe12", description: "The original potatoe Cat", price:"£1")
