@@ -1,5 +1,7 @@
 class Item < ApplicationRecord
+	has_many :order_items
 
+  
 
 	has_and_belongs_to_many :users
       validates :title, :description, :price, presence: true
