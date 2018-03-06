@@ -18,8 +18,26 @@
   <body>
     <%= stylesheet_link_tag "bootstrap.css" %>
     <%= stylesheet_link_tag "theme.css" %>
-    <%= render 'layouts/header' %>
+    <%= javascript_include_tag "main.js" %>
+
+
+    
     <%= yield %>
     <%= render 'layouts/footer' %>
+     <%= javascript_include_tag "wow.js" %>
+  <script>
+  window.jQuery || document.write('<%= javascript_include_tag "jquery-1.11.2.min.js" %>')
+  </script>
+  
+
+<%= javascript_include_tag "swiper.min.js" %>
+<%= javascript_include_tag "bootstrap.min.js" %>
+<%= javascript_include_tag "jquery.countTo.js" %>
+<%= javascript_include_tag "jquery.inview.js" %>
+<%= javascript_include_tag "jquery.countdown.js" %>
+<%= javascript_include_tag "bootstrap-select.js" %>
+
+
+
   </body>
 </html>
